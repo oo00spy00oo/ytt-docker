@@ -17,6 +17,3 @@ FROM busybox:1.32
 
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 COPY --from=build /go/src/github.com/k14s/ytt/ytt /usr/bin/ytt
-WORKDIR /workspace
-ENTRYPOINT ["/usr/bin/ytt"]
-CMD ["-h"]
